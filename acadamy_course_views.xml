@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <record id="course0" model="acadamy.course">
+             <field name="name">caurse0</field>
+             <field name="description">secription1</field>
+        </record>
+        <record id="course1" model="acadamy.course">
+             <field name="name">caurse1</field>
+             <field name="description">secription2</field>
+        </record>
+        <record id="course2" model="acadamy.course">
+             <field name="name">caurse2</field>
+             <field name="description">secription3</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="acadamy_name">
+            <field name="name">course</field>
+            <field name="res_model">acadamy.course</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">form,tree</field>
+        </record>
+        <menuitem id="main_openacademy_menu" name="Open Academy"/>
+        <menuitem id="openacademy_menu" name="Open Academy"
+                  parent="main_openacademy_menu"/>
+        <menuitem id="courses_menu" name="Courses" parent="openacademy_menu"
+                  action="acadamy_name"/>
+   </data>
+</openerp>
